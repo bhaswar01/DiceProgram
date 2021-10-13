@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiceProgram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The sume is 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEZ-4T-yni">
+                                <rect key="frame" x="16" y="104" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0S-7b-ztD">
+                                <rect key="frame" x="192" y="396" width="30" height="30"/>
+                                <state key="normal" title="Roll"/>
+                                <connections>
+                                    <action selector="rollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yPj-X2-9rd"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="kwR-9Z-pRz">
+                                <rect key="frame" x="41.5" y="174.5" width="331" height="161.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice2" translatesAutoresizingMaskIntoConstraints="NO" id="oYf-wA-5X4">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="161.5"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice3" translatesAutoresizingMaskIntoConstraints="NO" id="hEf-G2-XXn">
+                                        <rect key="frame" x="178" y="0.0" width="153" height="161.5"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kwR-9Z-pRz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="2or-c8-wpt"/>
+                            <constraint firstItem="tEZ-4T-yni" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4Mq-UV-KFU"/>
+                            <constraint firstItem="kwR-9Z-pRz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.18" id="D8z-DB-bA7"/>
+                            <constraint firstItem="tEZ-4T-yni" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="EHZ-a1-JLD"/>
+                            <constraint firstItem="kwR-9Z-pRz" firstAttribute="top" secondItem="tEZ-4T-yni" secondAttribute="bottom" constant="50" id="H06-PH-MA0"/>
+                            <constraint firstItem="Z0S-7b-ztD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cYm-Yj-Faw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tEZ-4T-yni" secondAttribute="trailing" constant="16" id="iRR-0j-nxp"/>
+                            <constraint firstItem="Z0S-7b-ztD" firstAttribute="top" secondItem="kwR-9Z-pRz" secondAttribute="bottom" constant="60" id="qcj-B8-V55"/>
+                            <constraint firstItem="kwR-9Z-pRz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zX9-op-JW9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="diceOneImageView" destination="oYf-wA-5X4" id="t40-4n-BP8"/>
+                        <outlet property="diceTwoImageView" destination="hEf-G2-XXn" id="ukz-wi-Ozm"/>
+                        <outlet property="labelSumCount" destination="tEZ-4T-yni" id="P2R-Fj-AYN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.594202898550726" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice2" width="100" height="100"/>
+        <image name="dice3" width="100" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
