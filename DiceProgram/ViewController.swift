@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         let value1 = Int.random(in: 1...6)//6
         let value2 = Int.random(in: 1...6)//6
         
-        labelSumCount.text = "The sume is \(value1 + value2)"
+        labelSumCount.text = "The sum here is \(value1 + value2)"
         
         diceOneImageView.image = UIImage(named: "dice\(value1)")
         diceTwoImageView.image = UIImage(named: "dice\(value2)")
